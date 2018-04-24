@@ -69,21 +69,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 	func getData() {
 		http(url: "https://api.chrisbrocklesby.com", method: "GET") { (status, response, error) in
 			
-			// Parse JSON String (response) into useable data type.
-			guard let json = response?.data(using: .utf8)! else {
+			// Clear postArray Data
+			postArray.removeAll()
+			
+			// Parse Data 'JSON' String (response) into useable data type.
+			guard let data = response?.data(using: .utf8)! else {
 				print("Error: No JSON data to decode")
 				return
 			}
 			
-			// Decode JSON and put into 'Post' structure
-			guard let data = try? JSONDecoder().decode([Post].self, from: json) else {
+			// Decode JSON Data and put into a (Post) structure
+			guard let json = try? JSONDecoder().decode(Root.self, from: data) else {
 				print("Error: Couldn't decode data into Post structure")
 				return
 			}
 			
 			// Loop JSON data and insert into postArray
-			for user in data {
-				postArray.insert(Post(id: user.id, title: user.title, body: user.body), at: postArray.endIndex)
+			for result in json.data {
+				postArray.insert(Post(id: result.id, title: result.title, body: result.body), at: postArray.endIndex)
 			}
 			
 		}
@@ -115,7 +118,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		} else if searchArray.isEmpty == true {
 			cell.textLabel?.text = postArray[indexPath.row].title
 		}
-		//cell.detailTextLabel?.text = "This is a subtitle"
+		cell.detailTextLabel?.text = String(postArray[indexPath.row].id)
 		//cell.imageView?.image = UIImage(named: "apple")
         //cell.backgroundColor = UIColor.brown
 		

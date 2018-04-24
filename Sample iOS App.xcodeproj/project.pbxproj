@@ -13,6 +13,7 @@
 		51C8655B2062BFFC0021C826 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8655A2062BFFC0021C826 /* ViewController.swift */; };
 		51C8655E2062BFFC0021C826 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C8655C2062BFFC0021C826 /* Main.storyboard */; };
 		51C865602062BFFC0021C826 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51C8655F2062BFFC0021C826 /* Assets.xcassets */; };
+		51EF0954208F2FC60069C4D9 /* AddController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF0953208F2FC60069C4D9 /* AddController.swift */; };
 		8353C376207D46BF0012DCB2 /* FunctionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8353C375207D46BF0012DCB2 /* FunctionController.swift */; };
 		83CBDCFE2071293E00367A2F /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83CBDCFD2071293E00367A2F /* DetailController.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		51C8655D2062BFFC0021C826 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51C8655F2062BFFC0021C826 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51C865642062BFFC0021C826 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51EF0953208F2FC60069C4D9 /* AddController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddController.swift; sourceTree = "<group>"; };
 		8353C375207D46BF0012DCB2 /* FunctionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunctionController.swift; sourceTree = "<group>"; };
 		83CBDCFD2071293E00367A2F /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +71,7 @@
 				518EE495206416A000577902 /* PostModel.swift */,
 				83CBDCFD2071293E00367A2F /* DetailController.swift */,
 				8353C375207D46BF0012DCB2 /* FunctionController.swift */,
+				51EF0953208F2FC60069C4D9 /* AddController.swift */,
 			);
 			path = "Sample iOS App";
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				51C865592062BFFC0021C826 /* AppDelegate.swift in Sources */,
 				8353C376207D46BF0012DCB2 /* FunctionController.swift in Sources */,
 				83CBDCFE2071293E00367A2F /* DetailController.swift in Sources */,
+				51EF0954208F2FC60069C4D9 /* AddController.swift in Sources */,
 				518EE4942063C9E500577902 /* http.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
