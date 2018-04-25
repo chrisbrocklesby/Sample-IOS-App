@@ -1,7 +1,7 @@
 import Foundation
 
 ////////////////////////////// HTTP Function ///////////////////////////////////
-func http(url: String, method: String = "GET", type: String = "FORM", data: Dictionary <String, Any> = [:], completion: @escaping (_ status: Int?, _ response: String?, _ error: String?) -> Void = { _,_,_  in }) {
+public func http(url: String, method: String = "GET", type: String = "FORM", data: Dictionary <String, Any> = [:], completion: @escaping (_ status: Int?, _ response: String?, _ error: String?) -> Void = { _,_,_  in }) {
 	
 	// Set URL and Create URL Format String
 	let setUrl = URL(string: url)

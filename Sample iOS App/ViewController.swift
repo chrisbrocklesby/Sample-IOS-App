@@ -137,5 +137,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 		}
 		
 	}
+	
+	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+		if editingStyle == .delete {
+			postArray.remove(at: indexPath.row)
+			http(url: "https://api.chrisbrocklesby.com/\(indexPath.row)", method: "DELETE")
+			tableView.deleteRows(at: [indexPath], with: .fade)
+		}
+	}
 
 }
